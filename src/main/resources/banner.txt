@@ -1,0 +1,1 @@
+x.application    - Spring Boot Version${spring-boot.formatted-version}

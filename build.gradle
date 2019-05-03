@@ -19,11 +19,28 @@ ext {
     set('springCloudVersion', 'Greenwich.SR1')
 }
 
+configurations {
+    implementation.exclude module: 'spring-boot-starter-tomcat'
+}
+
 dependencies {
+    /**
+     * SpringBoot's Dependencies
+     */
+    implementation 'org.springframework.boot:spring-boot-starter-undertow'
     implementation 'org.springframework.boot:spring-boot-starter-web-services'
+    /**
+     * SpringAdmin's Dependencies
+     */
     implementation 'de.codecentric:spring-boot-admin-starter-server'
+    /**
+     * Kotlin's Dependencies
+     */
     implementation 'org.jetbrains.kotlin:kotlin-reflect'
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+    /**
+     * SpringCloud's Dependencies
+     */
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
